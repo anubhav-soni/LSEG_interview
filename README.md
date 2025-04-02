@@ -1,6 +1,6 @@
 # LSEG_interview
 
-# AWS Instance Metadata Retriever
+## AWS Instance Metadata Retriever
 
 This Node.js script retrieves metadata from an AWS EC2 instance using the AWS Instance Metadata Service (IMDS). 
 It can fetch all metadata in JSON format or retrieve specific metadata keys.
@@ -23,18 +23,54 @@ This project is hosted on GitHub: [LSEG_interview](https://github.com/anubhav-so
 
 ## Installation
 
-Clone the repository:
+### 1. Clone the repository:
 
 ```sh
 git clone https://github.com/anubhav-soni/LSEG_interview.git
 cd LSEG_interview
 ```
 
-Install dependencies:
+### 2. Navigate to the Correct Directory
+Ensure you are in the correct directory before running any commands:
 
 ```sh
-npm install
+cd C:\Users\sonip\LSEG_interview
+**Note: go to ypur specific folder
 ```
+
+Verify the contents of the folder:
+
+```sh
+ls
+```
+
+Ensure `metadata.js` is present in this directory.
+
+### 3. Initialize a New `package.json`
+If `package.json` does not exist, create it by running:
+
+```sh
+npm init -y
+```
+
+This will generate a `package.json` file with default values.
+
+### 4. Install Dependencies
+Once `package.json` is created, install dependencies:
+
+```sh
+npm install yargs
+```
+
+Since this script does not use any other external packages (only `http`, which is built-in), `npm install` is only required to install `yargs`.
+
+Verify installation:
+
+```sh
+ls
+```
+
+Ensure `node_modules` and `package.json` exist.
 
 ## Usage
 
@@ -75,5 +111,3 @@ node metadata.js --pretty
   "public-ipv4": "54.234.56.78"
 }
 ```
-
-
